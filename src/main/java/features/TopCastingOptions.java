@@ -7,7 +7,7 @@ public class TopCastingOptions {
 
 	public static void main(String[] args) {
 		
-		//ChromeDriver driver = new ChromeDriver(); --browser specific
+		//ChromeDriver driver = new ChromeDriver(); --browser specific-valid but not recommended- doesn't support crossbrowser testing
 		//ChromiumDriver driver = new ChromeDriver();
 		//RemoteWebDriver driver = new ChromeDriver(); //RemoteWebDriver has the implementation of all WebDriver methods
 		     //-valid top casting -recommended
