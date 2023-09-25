@@ -6,7 +6,7 @@ public class AmazonTest {
 		
 		BrowserUtils br = new BrowserUtils();
 		br.initDriver("chrome");
-		//br.launchURL("https://www.amazon.de");
+		br.launchURL("https://www.amazon.de");
 
 	}
 

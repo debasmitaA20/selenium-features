@@ -6,7 +6,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserUtils {
 
@@ -19,10 +18,9 @@ public class BrowserUtils {
 	 * @return instance of WebDriver
 	 */
 	public WebDriver initDriver(String browser) {
-		
+		//SeleniumManager is natively available with the Selenium-Java dependency. (>4.6.0)
 		switch(browser.toLowerCase().trim()) {
 		case "chrome" :
-			WebDriverManager.chromedriver().chromedriver();
 			driver = new ChromeDriver();
 			break;
 		case "firefox":	
