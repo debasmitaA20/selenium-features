@@ -6,30 +6,30 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrowserUtils {
+public class BrowserUtil {
 
 	private WebDriver driver; //null
 	
 	/**
 	 * This method is used to initialize the driver
-	 * based on the browser
+	 * based on the browser name
 	 * @param browser
 	 * @return instance of WebDriver
+	 * 
 	 */
 	public WebDriver initDriver(String browser) {
-		
+		//SeleniumManager is natively available with the Selenium-Java dependency. (>4.6.0)
+		//WebDriverManager.chromedriver().setup(); <4.5.3
 		switch(browser.toLowerCase().trim()) {
 		case "chrome" :
-			WebDriverManager.chromedriver().chromedriver();
 			driver = new ChromeDriver();
 			break;
 		case "firefox":	
 			driver = new FirefoxDriver();
 			break;
 		case "edge":
-			driver = new EdgeDriver();
+			driver = new EdgeDriver();	
 			break;
 		case "safari":
 			driver = new SafariDriver();
@@ -65,12 +65,12 @@ public class BrowserUtils {
 		return driver.getCurrentUrl();
 	}
 	
-	public void closeBroser() {
+	public void closeBrowser() {
 		if(driver !=null) { //NullPointerException
 			driver.close();
 		}
 	}
-	public void quitBroser() {
+	public void quitBrowser() {
 		if(driver !=null) { //NullPointerException
 			driver.quit();
 		}
