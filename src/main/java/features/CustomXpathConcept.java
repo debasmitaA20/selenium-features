@@ -1,5 +1,6 @@
 package features;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -70,10 +71,47 @@ public class CustomXpathConcept {
 		
 		//starts-with() with text() : can be used for paragraphs
 		//tag[starts-with(text(),'value')]
-		////a[starts-with(text(),'Amazon')] -- 11
+		//a[starts-with(text(),'Amazon')] -- 11
 		
+		//ends-with() in xpath --NA
 		
+		//position/index in xpath
+		// (//input[@class='form-control'])[2]
+		By.xpath("(//input[@class='form-control'])[2]"); //(//input[@class='form-control']) -- capture group
+		// (//input[@class='form-control'])[position()=2]
 		
+		// (//input[@class ='form-control']) -- 6 
+		//last() -- last element
+		// (//input[@class ='form-control'])[last()]
+		//Help link on Amazon footer section - (//div[contains(@class,'navFooterLinkCol')])[last()]//li[last()]
+		
+		driver.findElement(By.xpath("//div[contains(@class,'navFooterLinkCol')])[last()]//li[last()]")).getText();
+		
+		//class in locator : classname, xpath, css
+		//input[@class='form-control private-form__control login-email']
+		//input[@class='login-email'] -- not valid
+		//By.className("form-control private-form__control login-email"); -- not valid
+		//By.className("login-email"); -- valid
+		//By.className("//input[contains(@class,'login-email')]"); -- valid
+		
+		//parent to child
+		// parent/child --direct
+		// parent//child --direct + indirect
+		
+		//backward traversing
+		//input[@id='input-email']/../../../../../../../../../../ --upto <html>
+		
+		//preceding-sibling
+		//input[@id='input-email']/preceding-sibling::label
+		By email_label = By.xpath("//input[@id='input-email']/preceding-sibling::label");
+		String email_label_text = driver.findElement(email_label).getText();
+		
+		//label[@id='input-email']
+		
+		//following-sibling
+		//label[@for='input-email']/following-sibling::input 
+		//label[@for='input-email']/following-sibling::input[@name='email']
+		//xpath/parent::<parenttag>
 
 	}
 
