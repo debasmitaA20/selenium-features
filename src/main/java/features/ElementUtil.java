@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class ElementUtil {
@@ -30,6 +31,16 @@ public class ElementUtil {
 	
 	public void doClick(By locator) {
 		getElement(locator).click();;
+	}
+	
+	public void doActionsSendkeys(By locator, String keys) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getElement(locator), keys).build().perform();
+	}
+	
+	public void doActionsClick(By locator) {
+		Actions action = new Actions(driver);
+		action.click(getElement(locator)).build().perform();
 	}
 	
 	public String doElementGetText(By locator) {
