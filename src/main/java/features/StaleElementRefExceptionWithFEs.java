@@ -9,13 +9,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class StaleElementRefExceptionWithFEs {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		
         WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.freshworks.com/");
 		
 		List<WebElement> linksList = driver.findElements(By.xpath("//div[text()='Products']/following-sibling::ul//a"));
+		
+		for(WebElement e : linksList) {
+			System.out.println(e.getText());
+		}
 		
 		for(int i =0; i<linksList.size(); i++) {
 			linksList.get(i).click();
