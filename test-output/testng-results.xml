@@ -1,65 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-16T11:54:17 CEST" name="Default suite" finished-at="2023-10-16T11:54:23 CEST" duration-ms="6126">
+  <suite started-at="2023-10-16T14:30:00 CEST" name="Regression Suite" finished-at="2023-10-16T14:30:14 CEST" duration-ms="13556">
     <groups>
     </groups>
-    <test started-at="2023-10-16T11:54:17 CEST" name="Default test" finished-at="2023-10-16T11:54:23 CEST" duration-ms="6126">
-      <class name="testng_features.LoginPageNegativeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testng_features.LoginPageNegativeTest@3c419631]" started-at="2023-10-16T11:54:17 CEST" name="setUp" finished-at="2023-10-16T11:54:21 CEST" duration-ms="4301" status="PASS">
+    <test started-at="2023-10-16T14:30:00 CEST" name="Google Test" finished-at="2023-10-16T14:30:06 CEST" duration-ms="5475">
+      <class name="testng_features.GoogleTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testng_features.GoogleTest@1972e513]" started-at="2023-10-16T14:30:00 CEST" name="setup" finished-at="2023-10-16T14:30:05 CEST" duration-ms="4640" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="doLoginTest(java.lang.String, java.lang.String)[pri:0, instance:testng_features.LoginPageNegativeTest@3c419631]" started-at="2023-10-16T11:54:21 CEST" name="doLoginTest" data-provider="loginNegativeTestData" finished-at="2023-10-16T11:54:22 CEST" duration-ms="640" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[debasmita123!gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setup -->
+        <test-method signature="searchBarExitsTest()[pri:0, instance:testng_features.GoogleTest@1972e513]" started-at="2023-10-16T14:30:05 CEST" name="searchBarExitsTest" finished-at="2023-10-16T14:30:05 CEST" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method signature="doLoginTest(java.lang.String, java.lang.String)[pri:0, instance:testng_features.LoginPageNegativeTest@3c419631]" started-at="2023-10-16T11:54:22 CEST" name="doLoginTest" data-provider="loginNegativeTestData" finished-at="2023-10-16T11:54:23 CEST" duration-ms="568" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[debasmita122!gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- searchBarExitsTest -->
+        <test-method signature="titleTest()[pri:0, instance:testng_features.GoogleTest@1972e513]" started-at="2023-10-16T14:30:05 CEST" name="titleTest" finished-at="2023-10-16T14:30:05 CEST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method signature="doLoginTest(java.lang.String, java.lang.String)[pri:0, instance:testng_features.LoginPageNegativeTest@3c419631]" started-at="2023-10-16T11:54:23 CEST" name="doLoginTest" data-provider="loginNegativeTestData" finished-at="2023-10-16T11:54:23 CEST" duration-ms="584" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[debasmita122!gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@1]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testng_features.GoogleTest@1972e513]" started-at="2023-10-16T14:30:05 CEST" name="tearDown" finished-at="2023-10-16T14:30:06 CEST" duration-ms="716" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-      </class> <!-- testng_features.LoginPageNegativeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- testng_features.GoogleTest -->
+    </test> <!-- Google Test -->
+    <test started-at="2023-10-16T14:30:06 CEST" name="Amazon Test" finished-at="2023-10-16T14:30:09 CEST" duration-ms="3438">
+      <class name="testng_features.AmazonTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testng_features.AmazonTest@239a307b]" started-at="2023-10-16T14:30:06 CEST" name="setup" finished-at="2023-10-16T14:30:08 CEST" duration-ms="2634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="searchBarExitsTest()[pri:0, instance:testng_features.AmazonTest@239a307b]" started-at="2023-10-16T14:30:08 CEST" name="searchBarExitsTest" finished-at="2023-10-16T14:30:08 CEST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBarExitsTest -->
+        <test-method signature="signinLinkTest()[pri:0, instance:testng_features.AmazonTest@239a307b]" started-at="2023-10-16T14:30:08 CEST" name="signinLinkTest" finished-at="2023-10-16T14:30:08 CEST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signinLinkTest -->
+        <test-method signature="titleTest()[pri:0, instance:testng_features.AmazonTest@239a307b]" started-at="2023-10-16T14:30:08 CEST" name="titleTest" finished-at="2023-10-16T14:30:08 CEST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testng_features.AmazonTest@239a307b]" started-at="2023-10-16T14:30:08 CEST" name="tearDown" finished-at="2023-10-16T14:30:09 CEST" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testng_features.AmazonTest -->
+    </test> <!-- Amazon Test -->
+    <test started-at="2023-10-16T14:30:09 CEST" name="Opencart Test" finished-at="2023-10-16T14:30:14 CEST" duration-ms="4570">
+      <class name="testng_features.OpencartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testng_features.OpencartTest@17bffc17]" started-at="2023-10-16T14:30:09 CEST" name="setup" finished-at="2023-10-16T14:30:13 CEST" duration-ms="3847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="searchBarExitsTest()[pri:0, instance:testng_features.OpencartTest@17bffc17]" started-at="2023-10-16T14:30:13 CEST" name="searchBarExitsTest" finished-at="2023-10-16T14:30:13 CEST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBarExitsTest -->
+        <test-method signature="titleTest()[pri:0, instance:testng_features.OpencartTest@17bffc17]" started-at="2023-10-16T14:30:13 CEST" name="titleTest" finished-at="2023-10-16T14:30:13 CEST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testng_features.OpencartTest@17bffc17]" started-at="2023-10-16T14:30:13 CEST" name="tearDown" finished-at="2023-10-16T14:30:14 CEST" duration-ms="662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testng_features.OpencartTest -->
+    </test> <!-- Opencart Test -->
+  </suite> <!-- Regression Suite -->
 </testng-results>
