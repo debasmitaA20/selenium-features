@@ -9,19 +9,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class OpencartTest {
-WebDriver driver;
-	
-	@BeforeTest
-	public void setup() {
-		driver = new ChromeDriver();
-		System.out.println("Launching browser.");
-		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-	}
-	
-	@Test
+public class OpencartTest extends BaseTest{
+
+	@Test(priority=1)
 	public void titleTest() {
 		String actual = driver.getTitle();
 		System.out.println(actual);
@@ -29,16 +19,11 @@ WebDriver driver;
 		Assert.assertTrue(actual.contains(expected));
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void searchBarExitsTest() {
 		WebElement search = driver.findElement(By.name("search"));
 		Assert.assertTrue(search.isDisplayed());
 	}
-	
-	@AfterTest
-	public void tearDown() {
-		System.out.println("Quitting browser.");
-		driver.quit();
-	}
+
 }
 

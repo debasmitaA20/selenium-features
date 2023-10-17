@@ -9,19 +9,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class GoogleTest {
-WebDriver driver;
-	
-	@BeforeTest
-	public void setup() {
-		driver = new ChromeDriver();
-		System.out.println("Launching browser.");
-		driver.get("https://www.google.com/");
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-	}
-	
-	@Test
+public class GoogleTest extends BaseTest{
+
+	@Test(priority=1)
 	public void titleTest() {
 		String actual = driver.getTitle();
 		System.out.println(actual);
@@ -29,15 +19,10 @@ WebDriver driver;
 		Assert.assertTrue(actual.contains(expected));
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void searchBarExitsTest() {
 		WebElement search = driver.findElement(By.id("APjFqb"));
 		Assert.assertTrue(search.isDisplayed());
 	}
-	
-	@AfterTest
-	public void tearDown() {
-		System.out.println("Quitting browser.");
-		driver.quit();
-	}
+
 }
