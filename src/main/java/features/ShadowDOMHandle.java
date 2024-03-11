@@ -26,7 +26,7 @@ public class ShadowDOMHandle {
 		
 		enterPizza.sendKeys("mushroom");
 		
-		//if application is full of shadow dowm- selenium is not the right choice for it
+		//if application is full of shadow dom- selenium is not the right choice for it
 
 	}
 
